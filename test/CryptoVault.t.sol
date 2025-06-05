@@ -20,7 +20,7 @@ contract CryptoVaultTest is Test {
         token = new ERC20("TestToken", "TTK", 1_000_000);
         vault = new CryptoVault(2); // 2% withdrawal fee
 
-        token.transfer(user, 1_000 * 1e18); 
+        token.transfer(user, 1_000 * 1e18);
         vm.startPrank(user);
         token.approve(address(vault), type(uint256).max);
         vm.stopPrank();

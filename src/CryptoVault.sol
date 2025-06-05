@@ -5,9 +5,9 @@ import {IERC20} from "./IERC20.sol";
 
 contract CryptoVault {
     address public owner;
-    uint256 public withdrawalFeePercent; 
+    uint256 public withdrawalFeePercent;
 
-    mapping(address => mapping(address => uint256)) public userBalances; 
+    mapping(address => mapping(address => uint256)) public userBalances;
     mapping(address => uint256) public accumulatedFees;
 
     modifier onlyOwner() {
